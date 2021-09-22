@@ -1,0 +1,23 @@
+{
+  "name": "savings-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YogeshUpdhyay/Savings-Manager.git"
+  },
+  "author": "Yogesh Upadhyay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YogeshUpdhyay/Savings-Manager/issues"
+  },
+  "homepage": "https://github.com/YogeshUpdhyay/Savings-Manager#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
+}
