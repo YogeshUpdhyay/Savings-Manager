@@ -1,0 +1,38 @@
+version: '3.7'
+
+services:
+  
+  # app:
+  #   image: yogeshh2021/savings-manager:v1.0.0
+  #   build: .
+  #   ports:
+  #     - 4000:4000
+  #   restart: unless-stopped
+  #   volumes:
+  #     - .:/app/
+  #   command: npm run debug
+
+  mongo:
+    image: mongo:4.4.3
+    restart: unless-stopped
+    volumes:
+      - savings-manager-db:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDb_DATABASE: SavingsManagerDB
+    ports:
+      - 27017:27017
+  
+  mongo-express:
+    image: mongo-express:0.54.0
+    ports:
+      - 8081:8081
+    restart: unless-stopped
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: example
+
+volumes:
+  savings-manager-db: {}
+    
